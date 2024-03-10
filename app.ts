@@ -1,30 +1,17 @@
-// const person: {
-//   name: string;
-//   age: number;
-//   hobbies: string[];
-//   role: [number, string]; // Tuple型
-// } = {
-//   name: "miya",
-//   age: 28,
-//   hobbies: ["sports", "Cooking"],
-//   role: [2, "author"],
-// };
+// union型
 
-// Enumの例
-// Admin(管理者):0,Read only user(読取専用):1,Author(作者):2
-
-enum Role {
-  ADMIN,
-  READ_ONLY,
-  AUTHOR,
+function combine(input1: number | string, input2: number | string) {
+  let result;
+  // ランタイム上での型チェック
+  if (typeof input1 === "number" && typeof input2 === "number") {
+    result = input1 + input2;
+  } else {
+    result = input1.toString() + input2.toString();
+  }
+  return result;
 }
-const person = {
-  name: "miya",
-  age: 28,
-  hobbies: ["sports", "Cooking"],
-  role: Role.ADMIN,
-};
 
-if (person.role === Role.ADMIN) {
-  console.log("管理者ユーザー", Role.ADMIN);
-}
+const combineAges = combine(10, 58);
+console.log(combine);
+
+combine("max", "Annma");

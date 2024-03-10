@@ -20,12 +20,16 @@ name:"miya",
 age:"28
 }
 
-## Array 　
+---
+
+## 基本的な型
+
+### Array 　
 
 JavaScript の全ての Array。
 要素の方は、柔軟にも厳格にも指定できる
 
-## Tuple
+### Tuple
 
 要素の長さが固定された配列（配列の型をより厳密に明確に指定する場合に使用する）
 例：role: [number, string];
@@ -33,7 +37,7 @@ JavaScript の全ての Array。
 Array 対して要素の数と、それぞれどの型なのか指定できるが、
 注意点として、push ができてしまう
 
-## Enum（列挙型）
+### Enum（列挙型）
 
 定数の集合に対して名前をつけて管理できる
 {}を使い、定数のリストを定義する。
@@ -57,3 +61,15 @@ AUTHOR = 1,
 }
 
 文字列の設定も可能
+
+### Any
+
+TypeScript に何も伝えない
+基本的にどんな値でも持たせることができる
+型を特に指定しない場合に使用する。
+（どんな値になるか全くわからない場合、最後の手段として使用する）
+
+### union 型
+
+例：
+function combine(input1: number | string, input2: number | string) {}
