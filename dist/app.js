@@ -23,3 +23,4 @@ console.log(combineAges);
 // 結果をstirngで受けとる
 const combinedNames = combine("max", "Annma", "as-text");
 console.log(combinedNames);
+//# sourceMappingURL=app.js.map

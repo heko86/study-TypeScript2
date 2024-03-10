@@ -16,3 +16,4 @@ const number2 = 30;
 const printResult = true;
 const resultPhrase = "result";
 add(number1, number2, printResult, resultPhrase);
+//# sourceMappingURL=basics.js.map

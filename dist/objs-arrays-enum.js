@@ -27,3 +27,4 @@ const person = {
 if (person.role === Role.ADMIN) {
     console.log("管理者ユーザー", Role.ADMIN);
 }
+//# sourceMappingURL=objs-arrays-enum.js.map
