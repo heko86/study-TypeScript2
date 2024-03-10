@@ -1,9 +1,10 @@
+"use strict";
 function combine(input1, // alias型
 input2, //// union型
 resultConversion // literal型+union型
 // resultConversion2: ConversionDescriptor // // alias型
 ) {
-    var result;
+    let result;
     // ランタイム上での型チェック
     if ((typeof input1 === "number" && typeof input2 === "number") ||
         resultConversion === "as-number") {
@@ -15,10 +16,10 @@ resultConversion // literal型+union型
     return result;
 }
 // 結果をnumberで受け取る
-var combineAges = combine(10, 58, "as-number");
+const combineAges = combine(10, 58, "as-number");
 console.log(combineAges);
-var combineStringAges = combine("10", "58", "as-number");
+const combineStringAges = combine("10", "58", "as-number");
 console.log(combineAges);
 // 結果をstirngで受けとる
-var combinedNames = combine("max", "Annma", "as-text");
+const combinedNames = combine("max", "Annma", "as-text");
 console.log(combinedNames);
