@@ -73,3 +73,15 @@ TypeScript に何も伝えない
 
 例：
 function combine(input1: number | string, input2: number | string) {}
+
+### literal 型
+
+値をのものを厳密に指定するもの。
+resultConversion: "as-number" | "as-text"
+
+### alias 型
+
+型の定義を再利用することができる  
+→ 型の書き間違えや、型の名前を説明的なものにすることによって、開発の意図をより明確にコードに表せる
+
+例：type Combinable = number | string;
